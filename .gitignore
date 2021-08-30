@@ -1,0 +1,8 @@
+# Project exclude paths
+/.gradle/
+/build/
+/dip/build/
+/isp/build/
+/lsp/build/
+/ocp/build/
+/srp/build/
