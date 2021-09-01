@@ -1,29 +1,29 @@
-package srp.printer
+package ocp.printer
 
-import srp.dao.Person
+import ocp.dao.Person
 
-class PersonPrinter {
+class LaborerPrinter implements PersonPrinter {
     private List<Person> persons
 
-    PersonPrinter(List<Person> persons) {
-        println("Persons list contains ${persons.size()} persons")
+    LaborerPrinter(List<Person> persons) {
+        println("Laborer list contains ${persons.size()} persons")
         this.persons = persons
     }
 
     void printPersonsCount() {
-        println("Print persons count ${persons.size()}")
+        println("Print laborer count ${persons.size()}")
     }
 
     void printPerson(int index) {
-        println("Person by index $index: ${personToString(persons.get(index))}")
+        println("Laborer by index $index: ${personToString(persons.get(index))}")
     }
 
     void printFullName(int index) {
-        println("Full person name by index $index: ${persons.get(index).getFirstName()} ${persons.get(index).getLastName()}")
+        println("Full laborer name by index $index: ${persons.get(index).getFirstName()} ${persons.get(index).getLastName()}")
     }
 
     void printAllPersons() {
-        println("All persons: ")
+        println("All laborer: ")
         persons.eachWithIndex { person, index ->
             println("$index" + ":" + personToString(person))
         }
@@ -31,7 +31,7 @@ class PersonPrinter {
 
     private String personToString(Person person) {
         String stringPerson =
-                "Person - |" +
+                "Laborer - |" +
                         " First name: ${person.getFirstName()}" +
                         "; Last name: ${person.getLastName()}" +
                         "; Age: ${person.getAge()}" +

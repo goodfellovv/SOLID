@@ -6,3 +6,5 @@
 /lsp/build/
 /ocp/build/
 /srp/build/
+/.idea/
+/gradle/

@@ -7,11 +7,11 @@ import srp.xlsx.XlsToPersonParser
 
 class PrinterContext {
 
-    private String XLS_PATH = "srp/src/main/resources/Source.xls"
+    private String XLS_PATH = "srp/src/main/resources/Persons.xls"
 
-    private XlsToPersonParser parser;
-    private List<Person> persons;
-    private PersonPrinter printer;
+    private XlsToPersonParser parser
+    private List<Person> persons
+    private PersonPrinter printer
 
     PrinterContext(String XLS_PATH) {
         this.XLS_PATH = XLS_PATH
