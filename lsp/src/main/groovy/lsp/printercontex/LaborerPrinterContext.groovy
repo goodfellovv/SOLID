@@ -1,13 +1,13 @@
-package ocp.printercontex
+package lsp.printercontex
 
 
-import ocp.dao.Laborer
-import ocp.printer.LaborerPrinter
-import ocp.xlsx.XlsToLaborerParser
+import lsp.dao.Laborer
+import lsp.printer.LaborerPrinter
+import lsp.xlsx.XlsToLaborerParser
 
 class LaborerPrinterContext implements PersonPrinterContext {
 
-    private String XLS_PATH = "ocp/src/main/resources/Laborers.xls"
+    private String XLS_PATH = "lsp/src/main/resources/Laborers.xls"
 
     private XlsToLaborerParser parser
     private List<Laborer> persons

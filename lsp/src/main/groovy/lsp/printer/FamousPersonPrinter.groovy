@@ -1,40 +1,39 @@
-package ocp.printer
+package lsp.printer
 
+import lsp.dao.PublicPerson
 
-import ocp.dao.Person
-
-class FamousPersonPrinter implements PersonPrinter {
-    private List<Person> persons
-
-    FamousPersonPrinter(List<Person> persons) {
+class FamousPersonPrinter extends PublicPersonPrinter implements PersonPrinter {
+    FamousPersonPrinter(List<PublicPerson> persons) {
         println("Famous persons list contains ${persons.size()} persons")
-        this.persons = persons
+        super.persons = persons
     }
 
     @Override
     void printPersonsCount() {
-        println("Print famous persons count ${persons.size()}")
+        print("Famous persons count ")
+        super.printPersonsCount()
     }
 
     @Override
     void printPerson(int index) {
-        println("Famous person by index $index: ${personToString(persons.get(index))}")
+        print("Famous person by index ")
+        super.printFullName(index)
     }
 
     @Override
     void printFullName(int index) {
-        println("Full famous person name by index $index: ${persons.get(index)?.firstName} ${persons.get(index)?.lastName}")
+        print("Full famous person name by index ")
+        super.printFullName(index)
     }
 
     @Override
     void printAllPersons() {
         println("All famous persons: ")
-        persons.eachWithIndex { person, index ->
-            println("$index" + ":" + personToString(person))
-        }
+        super.printAllPersons()
     }
 
-    private String personToString(Person person) {
+    @Override
+    protected String personToString(PublicPerson person) {
         String stringPerson =
                 "Famous person - |" +
                         " First name: ${person?.firstName}" +

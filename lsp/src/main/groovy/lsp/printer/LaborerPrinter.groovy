@@ -1,39 +1,40 @@
-package ocp.printer
+package lsp.printer
 
-import ocp.dao.Person
+import lsp.dao.PublicPerson
 
-class LaborerPrinter implements PersonPrinter {
-    private List<Person> persons
+class LaborerPrinter extends PublicPersonPrinter implements PersonPrinter {
 
-    LaborerPrinter(List<Person> persons) {
+    LaborerPrinter(List<PublicPerson> persons) {
         println("Laborer list contains ${persons.size()} persons")
-        this.persons = persons
+        super.persons = persons
     }
 
     @Override
     void printPersonsCount() {
-        println("Print laborer count ${persons.size()}")
+        print("Laborer count ")
+        super.printPersonsCount()
     }
 
     @Override
     void printPerson(int index) {
-        println("Laborer by index $index: ${personToString(persons.get(index))}")
+        print("Laborer by index ")
+        super.printPerson(index)
     }
 
     @Override
     void printFullName(int index) {
-        println("Full laborer name by index $index: ${persons.get(index)?.firstName} ${persons.get(index)?.lastName}")
+        print("Full laborer name by index ")
+        super.printFullName(index)
     }
 
     @Override
     void printAllPersons() {
         println("All laborer: ")
-        persons.eachWithIndex { person, index ->
-            println("$index" + ":" + personToString(person))
-        }
+        super.printAllPersons()
     }
 
-    private String personToString(Person person) {
+    @Override
+    protected String personToString(PublicPerson person) {
         String stringPerson =
                 "Laborer - |" +
                         " First name: ${person?.firstName}" +

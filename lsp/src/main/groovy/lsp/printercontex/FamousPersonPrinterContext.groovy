@@ -1,13 +1,13 @@
-package ocp.printercontex
+package lsp.printercontex
 
-import ocp.dao.FamousPerson
-import ocp.printer.FamousPersonPrinter
-import ocp.xlsx.XlsToFamousPersonParser
+import lsp.dao.FamousPerson
+import lsp.printer.FamousPersonPrinter
+import lsp.xlsx.XlsToFamousPersonParser
 
 
 class FamousPersonPrinterContext implements PersonPrinterContext {
 
-    private String XLS_PATH = "ocp/src/main/resources/Celebrities.xls"
+    private String XLS_PATH = "lsp/src/main/resources/Celebrities.xls"
 
     private XlsToFamousPersonParser parser
     private List<FamousPerson> persons

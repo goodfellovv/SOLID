@@ -4,6 +4,7 @@ import ocp.dao.FamousPerson
 
 class XlsToFamousPersonParser implements XlsToPersonParser {
 
+    @Override
     List<FamousPerson> parsePerson(String path) {
         println("Parsing persons from: $path")
         List<FamousPerson> persons = new ArrayList<>()

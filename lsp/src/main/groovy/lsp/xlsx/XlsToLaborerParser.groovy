@@ -1,6 +1,6 @@
-package ocp.xlsx
+package lsp.xlsx
 
-import ocp.dao.Laborer
+import lsp.dao.Laborer
 
 class XlsToLaborerParser implements XlsToPersonParser {
 

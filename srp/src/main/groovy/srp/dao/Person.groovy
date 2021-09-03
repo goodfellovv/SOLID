@@ -9,13 +9,6 @@ class Person {
     Person() {
     }
 
-    Person(String firstName, String lastName, short age, Gender gender) {
-        this.firstName = firstName
-        this.lastName = lastName
-        this.age = age
-        this.gender = gender
-    }
-
     String getFirstName() {
         return firstName
     }

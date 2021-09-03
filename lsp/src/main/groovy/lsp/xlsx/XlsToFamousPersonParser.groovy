@@ -1,15 +1,15 @@
-package ocp.xlsx
+package lsp.xlsx
 
-import ocp.dao.Laborer
+import lsp.dao.FamousPerson
 
-class XlsToLaborerParser implements XlsToPersonParser {
+class XlsToFamousPersonParser implements XlsToPersonParser {
 
     @Override
-    List<Laborer> parsePerson(String path) {
+    List<FamousPerson> parsePerson(String path) {
         println("Parsing persons from: $path")
-        List<Laborer> persons = new ArrayList<>()
+        List<FamousPerson> persons = new ArrayList<>()
         new ExcelBuilder(path).eachLine([labels: true]) {
-            persons.add(new Laborer(
+            persons.add(new FamousPerson(
                     firstName: delegate.'First name',
                     lastName: delegate.'Last name',
                     age: delegate.'Age',

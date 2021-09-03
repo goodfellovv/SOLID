@@ -9,25 +9,22 @@ final class FamousPerson implements Person {
     FamousPerson() {
     }
 
-    FamousPerson(String firstName, String lastName, short age, Gender gender) {
-        this.firstName = firstName
-        this.lastName = lastName
-        this.age = age
-        this.gender = gender
-    }
-
+    @Override
     String getFirstName() {
         return firstName
     }
 
+    @Override
     String getLastName() {
         return lastName
     }
 
+    @Override
     short getAge() {
         return age
     }
 
+    @Override
     Gender getGender() {
         return gender
     }
