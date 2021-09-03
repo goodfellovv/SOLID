@@ -19,7 +19,7 @@ class LaborerPrinter implements PersonPrinter {
     }
 
     void printFullName(int index) {
-        println("Full laborer name by index $index: ${persons.get(index).getFirstName()} ${persons.get(index).getLastName()}")
+        println("Full laborer name by index $index: $index: ${persons.get(index)?.firstName} ${persons.get(index)?.lastName}")
     }
 
     void printAllPersons() {
@@ -32,10 +32,10 @@ class LaborerPrinter implements PersonPrinter {
     private String personToString(Person person) {
         String stringPerson =
                 "Laborer - |" +
-                        " First name: ${person.getFirstName()}" +
-                        "; Last name: ${person.getLastName()}" +
-                        "; Age: ${person.getAge()}" +
-                        "; Gender: ${person.getGender()}" +
+                        " First name: ${person?.firstName}" +
+                        "; Last name: ${person?.lastName}" +
+                        "; Age: ${person?.age}" +
+                        "; Gender: ${person?.gender}" +
                         " |"
         return stringPerson
     }

@@ -20,7 +20,7 @@ class FamousPersonPrinter implements PersonPrinter {
     }
 
     void printFullName(int index) {
-        println("Full famous person name by index $index: ${persons.get(index).getFirstName()} ${persons.get(index).getLastName()}")
+        println("Full famous person name by index $index: ${persons.get(index)?.firstName} ${persons.get(index)?.lastName}")
     }
 
     void printAllPersons() {
@@ -33,10 +33,10 @@ class FamousPersonPrinter implements PersonPrinter {
     private String personToString(Person person) {
         String stringPerson =
                 "Famous person - |" +
-                        " First name: ${person.getFirstName()}" +
-                        "; Last name: ${person.getLastName()}" +
-                        "; Age: ${person.getAge()}" +
-                        "; Gender: ${person.getGender()}" +
+                        " First name: ${person?.firstName}" +
+                        "; Last name: ${person?.lastName}" +
+                        "; Age: ${person?.age}" +
+                        "; Gender: ${person?.gender}" +
                         " |"
         return stringPerson
     }

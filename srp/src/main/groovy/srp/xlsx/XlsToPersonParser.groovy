@@ -6,7 +6,7 @@ class XlsToPersonParser {
 
     List<Person> parsePerson(String path) {
         println("Parsing persons from: $path")
-        List<Person> persons = new ArrayList<>();
+        List<Person> persons = new ArrayList<>()
         new ExcelBuilder(path).eachLine([labels: true]) {
             persons.add(new Person(
                     firstName: delegate.'First name',
@@ -16,6 +16,6 @@ class XlsToPersonParser {
             ))
         }
         println("Parsed ${persons.size()} persons")
-        return persons;
+        return persons
     }
 }
