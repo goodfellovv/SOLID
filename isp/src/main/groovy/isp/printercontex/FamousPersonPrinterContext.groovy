@@ -12,7 +12,7 @@ class FamousPersonPrinterContext implements PersonPrinterContext {
     private String XLS_PATH = "isp/src/main/resources/Celebrities.xls"
 
     private XlsToFamousPersonParser parser
-    private List<FamousPerson> persons
+    private List<PublicPerson> persons
     private FamousPersonPrinter printer
 
     FamousPersonPrinterContext(String XLS_PATH) {
@@ -45,7 +45,7 @@ class FamousPersonPrinterContext implements PersonPrinterContext {
 
     @Override
     List<PublicPerson> getPersons() {
-        return new ArrayList<FamousPerson>(persons)
+        return new ArrayList<PublicPerson>(persons)
     }
 
     @Override

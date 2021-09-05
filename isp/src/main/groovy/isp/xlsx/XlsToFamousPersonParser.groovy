@@ -1,11 +1,12 @@
 package isp.xlsx
 
 import isp.dao.FamousPerson
+import isp.dao.PublicPerson
 
 class XlsToFamousPersonParser implements XlsToPersonParser {
 
     @Override
-    List<FamousPerson> parsePerson(String path) {
+    List<PublicPerson> parsePerson(String path) {
         println("Parsing persons from: $path")
         List<FamousPerson> persons = new ArrayList<>()
         new ExcelBuilder(path).eachLine([labels: true]) {

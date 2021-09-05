@@ -1,10 +1,11 @@
 package isp.xlsx
 
+import isp.dao.AnonymousPerson
 import isp.dao.SecretPerson
 
 class XlsToSecretPersonParser implements XlsToPersonParser {
     @Override
-    List<SecretPerson> parsePerson(String path) {
+    List<AnonymousPerson> parsePerson(String path) {
         println("Parsing persons from: $path")
         List<SecretPerson> persons = new ArrayList<>()
         new ExcelBuilder(path).eachLine([labels: true]) {

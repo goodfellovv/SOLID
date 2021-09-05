@@ -10,7 +10,7 @@ class SecretPersonPrinterContext implements PersonPrinterContext {
     private String XLS_PATH = "isp/src/main/resources/SecretPersons.xls"
 
     private XlsToSecretPersonParser parser
-    private List<SecretPerson> persons
+    private List<AnonymousPerson> persons
     private SecretPersonPrinter printer
 
     SecretPersonPrinterContext(String XLS_PATH) {
@@ -43,7 +43,7 @@ class SecretPersonPrinterContext implements PersonPrinterContext {
 
     @Override
     List<AnonymousPerson> getPersons() {
-        return new ArrayList<SecretPerson>(persons)
+        return new ArrayList<AnonymousPerson>(persons)
     }
 
     @Override
