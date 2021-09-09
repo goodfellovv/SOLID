@@ -1,5 +1,5 @@
 # SOLID
-##### Test project for the implementation of all SOLID principles via Groovy. The project contains 5 modules with it is own Main class correspond to each principle. Modules has no link dependency between each other. Each module has simple similarity of DAO, Excel file reader and Printer for values from excel file enclosured in resources.
+Sandbox project for the implementation of all SOLID principles via Groovy. The project contains 5 modules with it is own Main class correspond to each principle. Modules has no link dependency between each other. Each module has simple similarity of DAO, Excel file reader and Printer for values from excel file enclosured in resources.
 
 ### SRP - Single Responsibility Principle
 > A module or class should be responsible to one, and only one, actor
