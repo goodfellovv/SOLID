@@ -17,4 +17,4 @@ Sandbox project for the implementation of all SOLID principles via Groovy. The p
 > - High-level modules should not import anything from low-level modules. Both should depend on abstractions (e.g., interfaces).
 > - Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions
 
-Need more deep personal explanation or you consider that I am wrong? - Text me under this project or [Skype](https://join.skype.com/invite/kmRiJ31tfhkO "Skype") 
+Need more deep personal explanation or you consider that I am wrong? - Text me under this project
